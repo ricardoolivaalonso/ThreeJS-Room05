@@ -1,0 +1,8 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title></title><script defer="defer" src="bundle.e1b16dcae40adea806a1.js"></script><link href="main.css" rel="stylesheet"></head><body><canvas class="webgl"></canvas><script type="x-shader/x-vertex" id="vertexshaderCube">uniform float outline;
+            void main() {
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(position + normal * outline, 1.0);
+        }</script><script type="x-shader/x-fragment" id="fragmentshaderCube">uniform vec3 color;
+        uniform float opacity;
+        void main() {
+            gl_FragColor = vec4(color, opacity);
+        }</script></body></html>
